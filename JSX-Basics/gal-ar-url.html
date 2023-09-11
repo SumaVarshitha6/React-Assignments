@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        img{
+            display: inline-block;
+            width:150px;
+            height:150px;
+            
+        }
+    </style>
+</head>
+  <body>
+    <div id="d"></div>
+    <script type="text/babel"> 
+    var x=["https://tse1.mm.bing.net/th?id=OIP.jFZQogcGSNncaVuPSgJ2cQHaFj&pid=Api&P=0",
+           "https://tse3.mm.bing.net/th?id=OIP.FPmbUcb50Uw2irlK5PYmZAHaF7&pid=Api&P=0",
+           "https://tse4.mm.bing.net/th?id=OIP.JJhXtHnhCYJgUjUz0tV1gAHaEi&pid=Api&P=0"];
+           
+             var s =<div>
+                {
+                    x.map((a)=>{
+                        return <img src={a}></img>
+                    })
+                }
+             </div>
+            ReactDOM.render(s,document.getElementById("d"))
+    </script>
+  </body>
+</html>

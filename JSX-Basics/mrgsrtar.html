@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="d"></div>
+    <script type="text/babel"> 
+    var x=[6,4,5,46,45,3,1]
+    var y=[60,30,20,40,10]
+    {
+        x.sort(function (a, b) {
+        if (a < b) {
+        return -1;
+        }
+        if (a > b) {
+        return 1;
+        }
+        return 0;
+        });
+    }
+    {
+        y.sort(function (a, b) {
+        if (a < b) {
+        return -1;
+        }
+        if (a > b) {
+        return 1;
+        }
+        return 0;
+        });
+    }
+   
+    var s = <ul>
+                    {
+                        x.concat(y).map((r)=>{
+                        return <li>{r}</li>
+                        })
+                    
+                }
+                </ul>
+
+    
+      ReactDOM.render(s,document.getElementById("d"))
+    
+    </script>
+  </body>
+</html>

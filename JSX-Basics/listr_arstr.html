@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        h1{
+            color:red;
+            font-size: 25px;
+            border:10px solid green;
+            background-color: skyblue;
+            padding:10px;
+        }
+    </style>
+</head>
+  <body>
+    <h1>Welcome to Edupoly</h1>
+    <div id="d"></div>
+    <script type="text/babel"> 
+    var x=["suma","varshi","chinnu","honey","nani"];
+           
+             var s =<div>
+                {
+                    x.map((a)=>{
+                        return <li>{a}</li>
+                    })
+                }
+             </div>
+            ReactDOM.render(s,document.getElementById("d"))
+    </script>
+  </body>
+</html>

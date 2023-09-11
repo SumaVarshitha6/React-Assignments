@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            #d{
+                background-color: aqua;
+                font-size: 50px;
+                padding:10px;
+                
+            }
+            h6{
+                font-size:30px;
+                background-color: white;
+                padding:20px;
+                margin:20px;
+            }
+            img{
+                display: inline-block;
+                width:150px;
+                height:150px;        
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d"><b>Galler of animals</b>
+            <h6>Slide
+                <div id="d1"></div>
+            </h6>
+            <h6>Slide
+                <div id="d2"></div>
+            </h6>
+        </div>
+        <script type="text/babel"> 
+            var x=["https://tse1.mm.bing.net/th?id=OIP.jFZQogcGSNncaVuPSgJ2cQHaFj&pid=Api&P=0",
+                "https://tse3.mm.bing.net/th?id=OIP.FPmbUcb50Uw2irlK5PYmZAHaF7&pid=Api&P=0",
+                "https://tse4.mm.bing.net/th?id=OIP.JJhXtHnhCYJgUjUz0tV1gAHaEi&pid=Api&P=0"
+            ];        
+            var y=["https://tse3.mm.bing.net/th?id=OIP._pwUnBqoCRAKRZlWLLYzxwHaFj&pid=Api&P=0",
+                "https://tse2.mm.bing.net/th?id=OIP.PT8fmP1UF8W0_PVpxo6dIwHaFj&pid=Api&P=0",
+                "https://tse1.mm.bing.net/th?id=OIP.1cyb35zKsn8GDEufzoZH5AHaFj&pid=Api&P=0",
+                "https://tse1.mm.bing.net/th?id=OIP.g24V6bI5c2hvi1pTmdIqUwHaE7&pid=Api&P=0",
+                "https://tse1.mm.bing.net/th?id=OIP.S6LYhJVfx-f_duBCTN2hbwHaFj&pid=Api&P=0"
+            ];
+            var s =<div>{             
+                        x.map((a)=>{
+                        return <img src={a}></img>
+                        })
+                        }
+                    </div>
+            var v =<div>{             
+                        y.map((a)=>{
+                        return <img src={a}></img>
+                        })
+                        }
+                    </div>
+            ReactDOM.render(s,document.getElementById("d1"))
+            ReactDOM.render(v,document.getElementById("d2"))
+        </script>
+    </body>
+</html>    

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="d"></div>
+    <script type="text/babel"> 
+    var x=[1,2,3,4,5,6]
+      var s = <ul>
+                {
+                    x.map((a)=>{
+                        return <h1>{a}</h1>
+                    })
+                }
+                </ul>
+      ReactDOM.render(s,document.getElementById("d"))
+    </script>
+  </body>
+</html>

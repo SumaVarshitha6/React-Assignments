@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+  <body>
+    <div id="d"></div>
+    <script type="text/babel"> 
+        var x ={
+            "Firstname":"Praveen",
+            "lastname":"Gubbala",
+            "Age":40
+        }
+             var s =<div>
+            <h1>Firstname:{x.Firstname.toUpperCase()}</h1>
+            <h1>Lastname:{x.lastname.toUpperCase()}</h1>
+            <h1>Age:{x.Age}</h1>
+             </div>
+            ReactDOM.render(s,document.getElementById("d"))
+    </script>
+  </body>
+</html>

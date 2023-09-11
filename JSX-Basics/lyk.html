@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div  style="display:flex;justify-content:center;padding-top: 240px;">
+            <button onClick="like()">Like</button><div id="dl" style="padding:5px">0</div><br>
+            <button onClick="dislyk()">DisLike</button> <div id="ds" style="padding:5px">0</div>
+        </div>
+        
+        <script  type="text/babel">
+            var z=document.getElementById('dl')
+            var count=0;
+            function like(){
+                count=count+1;
+                z.innerHTML=count;  
+            }
+
+            var x=document.getElementById('ds')
+             var c=0;
+            function dislyk(){
+                        c=c+1;
+                        x.innerHTML=c;                
+            }
+        </script>
+    </body>
+
+   

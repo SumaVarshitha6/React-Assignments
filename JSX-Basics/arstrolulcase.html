@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <ol id="d1"></ol>
+    <ul id="d"></ul>
+    <script type="text/babel"> 
+    var x=["suma","varshi","chinnu","honey"];
+            var s =<div>
+                {
+                    x.map((a)=>{
+                        return <li>{a.toUpperCase()}</li>
+                    })
+                }
+             </div>
+             var v =<div>
+                {
+                    x.map((a)=>{
+                        return <li>{a.toLowerCase()}</li>
+                    })
+                }
+             </div>
+            ReactDOM.render(v,document.getElementById("d"))
+            ReactDOM.render(s,document.getElementById("d1"))
+    </script>
+  </body>
+</html>

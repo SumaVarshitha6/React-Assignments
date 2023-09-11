@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      #n,#l,#ag,#ade{
+        display: block;
+      }
+      #g{
+        display: inline-block;
+      }
+        </style>
+</head>
+  <body>
+    <form onsubmit="event.preventDefault()" name="usform">
+        <input id="n" type="text" placeholder="Enter Firstname" name="fname">
+        <input id="l" type="text" placeholder="Enter Lastname" name="lname">
+        <input id="ag" type="number" placeholder="Enter Age" name="age">
+        <button id="ade" onClick="ad()">Add employee </button>
+        <input id="g" type="radio" name="gender">:All
+        <input id="g" type="radio"name="gender">:Male
+        <input id="g" type="radio"name="gender">:Female
+    </form>
+    <table border="1">
+        <thead>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </thead>
+        <tbody id="tb">
+        </tbody>
+    </table>
+    <script type="text/babel">   
+
+       function delt(i){
+        tbl.splice(i,1);
+        tblg(tbl);
+       };
+
+      var tbl=[];
+        var sf=document.usform;
+        function ad(){
+          var emp={
+                    fname:"",
+                    lname:"",
+                    age:""
+                };
+                emp.fname=sf.fname.value;
+                emp.lname=sf.lname.value;
+                emp.age=sf.age.value;
+                tbl.push(emp);
+                tblg(tbl);
+              }
+          function tblg(ar){ 
+          var s = ar.map((a,i)=>{
+         return   <tr>
+                        <td>{a.fname}</td>
+                        <td>{a.lname}</td>
+                        <td>{a.age}</td>
+                        <td><button onClick={()=>{delt(i)}}>Delete</button></td>
+
+                        <td><button onClick={()=>{ed(i)}}>Edit</button></td>
+                    </tr>
+        });
+        
+        ReactDOM.render(s,document.getElementById("tb"))
+        }   
+    </script>
+  </body>
+</html>
+

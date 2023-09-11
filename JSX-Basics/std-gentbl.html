@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            img{
+                width:100px;
+            }
+        </style>
+    </head>
+  <body>
+    <div id="d"></div>
+    <script type="text/babel"> 
+        var students =[{
+            "Firstname":"Praveen",
+            "lastname":"Gubbala",
+            "Age":40,
+            "gender":"https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg"
+        },
+        {
+            "Firstname":"suma",
+            "lastname":"pala",
+            "Age":21,
+            "gender":"https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png"
+        },
+        {
+            "Firstname":"varshitha",
+            "lastname":"pala",
+            "Age":22,
+            "gender":"https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png"
+        },
+      ];
+             var s =<table border='1'>{
+                students.map((a)=>{
+                  return   <tr>
+                    <td>{a.Firstname}</td>
+            <td>{a.lastname}</td>
+            <td>{a.Age}</td>
+            <td><img src={a.gender}></img></td>
+            </tr>
+                })
+            }
+             </table>
+            ReactDOM.render(s,document.getElementById("d"))
+    </script>
+  </body>
+</html>
