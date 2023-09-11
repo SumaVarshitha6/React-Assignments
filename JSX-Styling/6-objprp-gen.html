@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        img{
+            width:100px;
+            height:100px;
+            padding:20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="d"></div>
+    <script type="text/babel">
+        var ar = [{
+            "Name":"suma",
+            "Gender":"female",
+            "Age":21,
+            "img":"https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png"
+        },
+        {
+        "Name":"nani",
+        "Gender":"male",
+        "Age":23,
+        "img":"https://i.pinimg.com/736x/2a/4e/8d/2a4e8dab6791ed643d5180bc72167f6d.jpg",
+      },
+      {
+        "Name":"varshi",
+        "Gender":"female",
+        "Age":22,
+        "img":"https://cdn.pixabay.com/photo/2014/04/02/14/10/female-306407_640.png"
+      }
+        ];
+      var jh1 = <div style={{padding:'20px'}}>       
+                 {
+                    ar.map((a)=>{
+                        return <div style={{border:'1px solid',padding:'20px',width:'350px'}}>
+                            <div style={a.Gender==="female"?{backgroundColor:'pink',display:'inline-block'}:{backgroundColor:'aqua',display:'inline-block'}}>
+                                <h1>Name:{a.Name}</h1>
+                                <h1>Gender:{a.Gender}</h1>
+                                <h1>Age:{a.Age}</h1>
+                            </div> 
+                            <img src={a.img}/> 
+                            </div>
+                        }) 
+                 } 
+                </div>
+      ReactDOM.render(jh1,document.getElementById("d"));
+  </script>
+  </body>
+</html>

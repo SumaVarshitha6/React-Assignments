@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="d3"></div>
+    <div id="d"></div>
+     <script type="text/babel">
+        var c = +prompt("enter no");
+        var s= prompt("enter string");
+        var jh1 = <div>
+                    <h1 style={(c%2===0)?{color:'red',backgroundColor:'green'}:{color:'green',backgroundColor:'red'}}>{c}</h1>
+                    </div>
+        ReactDOM.render(jh1,document.getElementById("d3"))
+        var jh2 = <div>
+                    <h1 style={(s.length%2===0)?{color:'green',backgroundColor:'black'}:{color:'red',backgroundColor:'black'}}>{s}</h1>
+                    </div>
+        ReactDOM.render(jh2,document.getElementById("d"))
+     </script>
+  </body>
+</html>

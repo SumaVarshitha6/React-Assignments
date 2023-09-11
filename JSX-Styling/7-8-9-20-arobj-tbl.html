@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="d"></div>
+    <script type="text/babel">
+        var ar = [{
+            "Name":"suma",
+            "Gender":"female",
+            "Age":21
+        },
+        {
+        "Name":"nani",
+        "Gender":"male",
+        "Age":23
+      },
+      {
+        "Name":"varshi",
+        "Gender":"female",
+        "Age":22
+      }
+        ];
+      var jh1 = <table border="2px solid teal">       
+                 {
+                    ar.map((a)=>{
+                        return (
+                            <tr style={a.Gender==="female"?{backgroundColor:'pink'}:{backgroundColor:'aqua'}}>
+                                <td>{a.Name}</td>
+                                <td>{a.Gender}</td>
+                                <td>{a.Age}</td>
+                            </tr> 
+                        ) 
+                        }) 
+                 } 
+                </table>
+      ReactDOM.render(jh1,document.getElementById("d"));
+  </script>
+  </body>
+</html>
