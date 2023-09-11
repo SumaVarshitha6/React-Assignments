@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        img{
+            display: block;
+            width: 100px;
+            height:100px;
+        }
+    </style>
+</head>
+  <body>
+    <div id='d'></div>
+    <script type="text/babel">
+        var jh1 = <div>
+            <select onClick={abc}>
+            <option  value="IND" name="n">India</option>
+            <option value="USA" name="n">United States of America</option>
+            <option value="SRI" name="n">SriLanka</option>
+            </select>
+            <h1 id="hd"></h1>
+            <div>
+            <input onChange={ab1} type="checkbox" value="react"/>:ReactJS<br/>
+            <input onChange={ab1} type="checkbox" value="angular"/>:Angular<br/>
+            <input onChange={ab1} type="checkbox" value="nodejs" />:Nodejs<br/>
+            <input onChange={ab1} type="checkbox" value="express"/>:Express<br/>
+            <input onChange={ab1} type="checkbox" value="mongo"/>:Mongodb<br/>
+            <input onChange={ab1} type="checkbox" value="mongoose"/>:Mongoose<br/>
+            <input onChange={ab1} type="checkbox" value="mysql" />:MySql<br/>
+            </div>
+            <h1 id="hdd"></h1>
+            <div>
+            <input type="date" onChange={ab}/>
+            <h1 id="dt"></h1> 
+            </div>
+            </div> 
+          
+        function abc(e){
+            var s=document.getElementById("hd");
+            s.innerHTML=e.target.value;
+        } 
+        var ar=[];
+        function ab1(e){
+            var s=document.getElementById("hdd");
+            if(e.target.checked===true){
+                ar.push(e.target.value);
+                s.innerHTML=ar;
+                console.log(s.innerHTML);
+            }
+            else{
+                var i=ar.indexOf(e.target.value);
+                ar.splice(i,1);
+                s.innerHTML=ar;
+                console.log(s.innerHTML);
+            }
+           
+        } 
+
+        function ab(e){
+            var s=document.getElementById("dt");
+            s.innerHTML=e.target.value;
+        }  
+             
+        ReactDOM.render(jh1,document.getElementById('d'))       
+    </script>
+  </body>
+</html>

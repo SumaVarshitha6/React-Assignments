@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id='d'></div>
+    <script type="text/babel">
+        var jh1 = <div>
+            <input id="dd" type="text"/>
+            <button onClick={abc}>Click here to console</button>
+            <h1 id="hd"></h1>
+            </div>
+       
+        function abc(e){
+            console.log(document.getElementById("dd").value);
+            document.getElementById("hd").innerHTML=document.getElementById("dd").value.toUpperCase();
+        }       
+        ReactDOM.render(jh1,document.getElementById('d'))       
+    </script>
+  </body>
+</html>

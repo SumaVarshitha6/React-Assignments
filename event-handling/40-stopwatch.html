@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id='d'></div>
+    <script type="text/babel">
+      var min=20;
+      var sec=0;
+      var interval;
+      function str(){
+        min=20;
+        sec=0;
+        interval = setInterval(()=>{
+                      if(sec===0){
+                        sec=59;
+                        min--;
+                        if(min==-1){
+                          clearInterval(interval);
+                          min=0;
+                          sec=0;
+                        }
+                      }
+                      else{
+                        sec--;
+                      }
+                      document.getElementById("s").innerHTML=sec;
+                      document.getElementById("v").innerHTML=min;
+                    },1)
+      }
+      function sto(){
+        clearInterval(interval);
+        min=0;
+        sec=0;
+        document.getElementById("s").innerHTML=secs;
+        document.getElementById("v").innerHTML=mins;
+      }
+      function ps(){
+        clearInterval(interval);
+      }
+      var jh1 = <div>
+                  <h1 id='dd'>
+                    <span id='s'></span>:
+                    <span id='v'></span>
+                  </h1>
+                  <button onClick={str}>start</button>
+                  <button onClick={sto}>stop</button>
+                  <button onClick={ps}>pause</button>
+                </div>
+      ReactDOM.render(jh1,document.getElementById("d"))
+      document.getElementById("s").innerHTML=min;
+      document.getElementById("v").innerHTML=sec;
+    </script>
+  </body>
+</html>

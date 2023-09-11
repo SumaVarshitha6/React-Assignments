@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id='d'></div>
+    
+    <script type="text/babel">
+          function abc(e){
+            document.getElementById("hd").innerHTML=e.target.value;
+        }  
+        var jh1 = <div>
+            <input id="d1" type="text"/>
+            <input id="d2" type="text"/>
+            <h1>add:</h1>
+            <h1 id="hd"></h1>
+            <h1>sub:</h1>
+            <h1 id="hdd"></h1>
+            <h1>mul/div:</h1>
+            <h1 id="hddd"></h1>
+            <button onClick={ad} >add</button>
+            <button onClick={sub} >sub</button>
+            <button onClick={mul} >mul</button>
+            <button onClick={div} >div</button>
+            </div>
+         function ad(){
+           var s= +document.getElementById("d1").value;
+           var v= +document.getElementById("d2").value;
+           
+           document.getElementById("hd").innerHTML=s+v;
+              
+         }
+         function sub(){
+           var s= +document.getElementById("d1").value;
+           var v= +document.getElementById("d2").value;
+           
+           document.getElementById("hdd").innerHTML=+s-v;
+          
+         }
+         function mul(){
+           var s= +document.getElementById("d1").value;
+           var v= +document.getElementById("d2").value;
+           
+           document.getElementById("hddd").innerHTML="mul : "+s*v;
+              
+         }
+         function div(){
+           var s= +document.getElementById("d1").value;
+           var v= +document.getElementById("d2").value;
+           
+           document.getElementById("hddd").innerHTML="div : "+s/v;
+              
+         }
+         
+         ReactDOM.render(jh1,document.getElementById('d'))  
+    </script>
+  </body>
+</html>

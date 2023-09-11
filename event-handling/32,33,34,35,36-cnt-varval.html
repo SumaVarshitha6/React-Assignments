@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id='d'></div>
+    <script type="text/babel">
+        var  s= +prompt();
+        var r=s;
+        var jh1=<div>
+            <h1 id="dd">{s}</h1>
+            <button onClick={()=>{abc()}}>inc</button>
+            <button onClick={()=>{ab()}}>dec</button>
+            <button onClick={a}>reset</button>
+            </div>
+            function a(){  
+            document.getElementById("dd").innerHTML=r;
+        }
+        function abc(){
+            s++;
+            document.getElementById("dd").innerHTML=s;
+        }
+        function ab(){
+            s--;
+            document.getElementById("dd").innerHTML=s;
+        }
+        ReactDOM.render(jh1,document.getElementById("d"))
+
+        </script>
+        </body>
+        </html>

@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id='d'></div>
+    <script type="text/babel">
+        var ar=[
+        {
+            "name":"suma",
+            "gender":"female",
+            "age":21
+        },
+        {
+            "name":"chinni",
+            "gender":"female",
+            "age":22
+        },
+        {
+            "name":"chinnu",
+            "gender":"female",
+            "age":21
+        },
+        {
+            "name":"surya",
+            "gender":"male",
+            "age":23
+        },
+        {
+            "name":"honey",
+            "gender":"female",
+            "age":22
+        },
+        {
+            "name":"nani",
+            "gender":"male",
+            "age":23
+        }
+        ];
+        var jh1 = <ul>{
+          ar.map((a,i)=>{
+               return <li>{a.name}<button  onClick={()=>{abc(a,i)}}>see</button></li>
+        })
+    }
+        <h1 id="dd"></h1>
+        <h2 id="ddd"></h2>     
+      </ul>  
+        function abc(a,i){    
+            document.getElementById("dd").innerHTML=a.name 
+            document.getElementById("ddd").innerHTML= a.gender +"<br/><br/>"+ a.age;
+       }       
+        ReactDOM.render(jh1,document.getElementById('d'))       
+    </script>
+  </body>
+</html>
